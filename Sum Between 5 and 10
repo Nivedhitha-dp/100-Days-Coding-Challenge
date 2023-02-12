@@ -1,0 +1,29 @@
+Skillrack
+Daily Challenge
+
+Problem : SUM Between 5 and 10
+
+Input:
+9
+2 5 3 2 10 3 10 5 4
+
+Output:
+9
+
+Program:
+N = int(input())
+l = list(map(int,input().strip().split()))
+s=0
+i=0
+while(i<N):
+    if l[i]==5:
+        j = i+1
+        while(j<N):
+            if l[j]!=10:
+                s+=l[j]
+            else:
+                break
+            j+=1
+        i = j
+    i+=1
+print(s)
